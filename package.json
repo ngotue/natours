@@ -3,9 +3,14 @@
   "version": "1.0.0",
   "description": "",
   "main": "app.js",
+  "engines": {
+    "node": ">=17.0.0"
+  },
   "scripts": {
     "start:dev": "nodemon server.js",
-    "start:prod": "NODE_ENV=production nodemon server.js"
+    "start:prod": "NODE_ENV=production nodemon server.js",
+    "lint": "eslint .",
+    "lint:fix": "eslint --fix --ext .js ."
   },
   "author": "",
   "license": "ISC",
