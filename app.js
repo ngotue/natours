@@ -6,7 +6,8 @@ const userRouter = require('./routes/userRoutes')
 
 const app = express();
 
-app.use(morgan('dev'));
+if(process.env.NODE_ENV === 'development') app.use(morgan('dev'));
+
 app.use(express.json()); // this middleware allows us to access req.body
 app.use(express.static(`${__dirname}/public`))
 
