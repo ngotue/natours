@@ -7,7 +7,7 @@
     "node": ">=17.0.0"
   },
   "scripts": {
-    "start:dev": "bun server.js",
+    "start:dev": "bun --hot server.js",
     "start:prod": "NODE_ENV=production bun server.js",
     "import": "node dev-data/data/import-dev-data.js --import",
     "purge": "node dev-data/data/import-dev-data.js --delete",
