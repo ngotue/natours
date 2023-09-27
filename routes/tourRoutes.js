@@ -5,7 +5,7 @@ const router = express.Router();
 // router.param('id', tourControllers.checkID);
 
 router.route('/top-5-cheapest').get(tourControllers.top5CheapestAlias, tourControllers.getAllTours)
-
+router.route('/tour-stats').get(tourControllers.tourAggregate)
 router
   .route('/')
   .get(tourControllers.getAllTours)
